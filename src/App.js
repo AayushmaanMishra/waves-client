@@ -8,13 +8,11 @@ import ContactUs from "./pages/ContactUs";
 import Contribute from "./pages/Contribute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Test from "./pages/Test";
 
 function App() {
   return (
     <div className="w-screen h-screen overflow-x-hidden">
       <Navbar />
-      {/* <Test /> */}
       <Routes>
         <Route exact index element={<Homepage />} />
         <Route path="about" element={<AboutUs />} />
