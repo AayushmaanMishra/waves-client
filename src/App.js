@@ -6,7 +6,7 @@ import GetInvolved from "./pages/GetInvolved";
 import OurWorks from "./pages/OurWorks";
 import ContactUs from "./pages/ContactUs";
 import Contribute from "./pages/Contribute";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
