@@ -1,14 +1,12 @@
-import {
-  Button,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightAddon,
-  InputRightElement,
-} from "@chakra-ui/react";
+import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { FcDonate } from "react-icons/fc";
-import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
+import {
+  AiOutlineClose,
+  AiOutlineSearch,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logoWithoutBg from "../assets/logos/WWE_withoutbg.png";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -26,45 +24,48 @@ export default function Navbar() {
             <img
               src={logoWithBg}
               alt="logo"
-              className="w-20 my-1 mx-3 rounded"
+              className="w-14 md:w-20 my-1 mx-3 rounded"
             />
           </Link>
           <div className="hidden md:flex md:items-center">
             <Link to="/">
-              <p className="text-lg text-white font-semibold hover:underline hover:cursor-pointer mx-2">
+              <p className="lg:text-xl text-white font-semibold hover:underline hover:cursor-pointer mx-2">
                 Home
               </p>
             </Link>
             <Link to="/about">
-              <p className="text-lg text-white font-semibold hover:underline hover:cursor-pointer mx-2">
+              <p className="lg:text-xl text-white font-semibold hover:underline hover:cursor-pointer mx-2">
                 About Us
               </p>
             </Link>
             <Link to="/getinvolved">
-              <p className="text-lg text-white font-semibold hover:underline hover:cursor-pointer mx-2">
+              <p className="lg:text-xl text-white font-semibold hover:underline hover:cursor-pointer mx-2">
                 Get Involved
               </p>
             </Link>
             <Link to="/ourworks">
-              <p className="text-lg text-white font-semibold hover:underline hover:cursor-pointer mx-2">
+              <p className="lg:text-xl text-white font-semibold hover:underline hover:cursor-pointer mx-2">
                 Our Works
               </p>
             </Link>
             <Link to="/contact">
-              <p className="text-lg text-white font-semibold hover:underline hover:cursor-pointer mx-2">
+              <p className="lg:text-xl text-white font-semibold hover:underline hover:cursor-pointer mx-2">
                 Contact Us
               </p>
             </Link>
             <Link to="/contribute">
-              <Button
-                rightIcon={<FcDonate />}
-                colorScheme="purple"
-                variant="solid"
-                className="mx-3"
-              >
-                Contribute
-              </Button>
+              <p className="lg:text-xl flex items-center text-white font-semibold hover:underline hover:cursor-pointer mx-2">
+                Contribute <FcDonate />
+              </p>
             </Link>
+            {/* <Link to="/contribute">
+              <Button
+                rightIcon={}
+                colorScheme="purple"
+                variant="outline"
+                className="mx-3"
+              ></Button>
+            </Link> */}
           </div>
           <div className="hidden md:block md:mr-5">
             <InputGroup>
@@ -172,6 +173,13 @@ export default function Navbar() {
                 children={<AiOutlineSearch className="text-black" />}
               />
             </InputGroup>
+            <div className="flex items-center justify-around w-full mt-3">
+              <FaFacebook className="text-blue-700 text-2xl" />
+              <FaTwitter className="text-blue-400 text-2xl" />
+              <FaInstagram className="text-pink-400 text-2xl" />
+              <AiFillLinkedin className="text-blue-500 text-2xl" />
+              <FaYoutube className="text-red-500 text-2xl" />
+            </div>
           </div>
         </div>
       ) : (

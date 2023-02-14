@@ -4,7 +4,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 
 export default function Footer() {
   return (
-    <div className="w-full bg-gray-100 py-8">
+    <div className="w-full bg-gray-100 py-6 px-4">
       <div className="max-w-[1240px] mx-auto flex flex-col">
         <div className="sm:flex text-center justify-between items-center">
           <p className="text-xl">Waves Women Empowerment</p>
@@ -16,8 +16,8 @@ export default function Footer() {
             <FaYoutube className="hover:text-red-500 hover:cursor-pointer text-3xl" />
           </div>
         </div>
-        <div className="flex justify-between">
-          <ul className="text-right lg:flex">
+        <div className="w-full flex justify-center items-center my-2 sm:items-start sm:flex sm:justify-between">
+          <ul className="text-right flex">
             <li className="mr-4">About</li>
             <li className="mr-4">Get Involved</li>
             <li className="mr-4">Our Works</li>
